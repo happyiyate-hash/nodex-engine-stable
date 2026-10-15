@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { ArrowDownLeft, ArrowLeft, ArrowUpRight, CircleHelp } from "lucide-react";
-import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { TokenIcon } from "@/components/wallet/token-icon";
 import { ASSETS, type AssetId } from "@/lib/wallet/assets";
@@ -51,7 +50,6 @@ function AssetPage() {
   const up = change >= 0;
 
   return <div className="space-y-5 pb-4">
-    <PageHeader title={asset.symbol} />
     <div className="flex items-center gap-3"><TokenIcon id={assetId} className="size-12" /><div className="min-w-0"><h1 className="text-2xl font-semibold tracking-tight">{asset.name}</h1><p className="mt-1 text-sm text-muted-foreground">{asset.networkLabel}</p></div></div>
     <section className="rounded-3xl border border-border bg-card p-5">
       <p className="text-sm text-muted-foreground">Market price</p>
