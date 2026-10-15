@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDownLeft, ArrowLeft, Check, ChevronRight, QrCode } from "lucide-react";
+import { ArrowDownLeft, Check, ChevronRight, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AddressQr } from "@/components/wallet/qr-code";
 import { CopyButton } from "@/components/wallet/copy-button";
@@ -19,7 +19,6 @@ function ReceivePage() {
   const qrValue = useMemo(() => address, [address]);
 
   return <div className="space-y-5 pb-4">
-    <header><Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground"><ArrowLeft className="size-4" /> Portfolio</Link><div className="mt-5 flex items-center gap-3"><div className="grid size-11 place-items-center rounded-2xl bg-secondary"><ArrowDownLeft className="size-5" /></div><div><p className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">Transfer</p><h1 className="text-2xl font-semibold tracking-tight">Receive crypto</h1></div></div><p className="mt-2 text-sm text-muted-foreground">Select a network to show its registered receiving address and QR code.</p></header>
     {!chains.length ? <section className="rounded-2xl border border-border bg-card px-4 py-12 text-center"><p className="font-semibold">No receiving addresses</p><p className="mt-2 text-sm text-muted-foreground">The engine has not returned any registered blockchain addresses for this wallet.</p></section> : <>
       <section className="space-y-2"><h2 className="px-1 text-sm font-semibold">Choose network</h2>{chains.map((chain, index) => {
         const id = String(chain.chain_id ?? chain.name ?? index);
