@@ -174,6 +174,7 @@ export function renderWebManifest(hostHeader) {
           src: "/favicon.svg",
           sizes: "any",
           type: "image/svg+xml",
+          purpose: "any",
         },
       ],
     },
@@ -187,7 +188,7 @@ export function grokPwaHeadTags(appName = DEFAULT_APP_NAME) {
     // Full-screen display comes from the manifest ("display": "fullscreen");
     // the legacy *-web-app-capable metas it replaces are deliberately absent.
     ["manifest", '<link rel="manifest" href="/__grok/manifest.webmanifest">'],
-    ["apple-touch-icon", '<link rel="apple-touch-icon" href="/__grok/icon-180.png">'],
+    ["apple-touch-icon", '<link rel="apple-touch-icon" href="/favicon.svg">'],
     [
       "apple-mobile-web-app-title",
       `<meta name="apple-mobile-web-app-title" content="${escapeHtml(appName)}">`,
