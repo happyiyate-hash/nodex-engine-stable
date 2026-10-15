@@ -28,12 +28,6 @@ function SettingsPage() {
 
   return (
     <div className="space-y-6 pb-4">
-      <header>
-        <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">Your wallet</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight">Settings</h1>
-        <p className="mt-1 text-sm text-muted-foreground">Manage your wallet, privacy, and connections.</p>
-      </header>
-
       <section className="rounded-2xl border border-border bg-card p-4">
         <div className="flex items-center gap-3">
           <div className="grid size-11 place-items-center rounded-2xl bg-secondary"><Wallet className="size-5" /></div>
