@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, CheckCircle2, ChevronDown, ChevronUp, CircleAlert, LoaderCircle, WalletCards } from "lucide-react";
+import { CheckCircle2, ChevronDown, ChevronUp, CircleAlert, LoaderCircle, WalletCards } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/wallet/copy-button";
 import { ProgressiveVirtualTokenList } from "@/components/wallet/progressive-virtual-token-list";
@@ -23,7 +23,6 @@ function BlockchainsPage() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const chains = wallet?.chainAddresses ?? [];
   return <div className="space-y-4 pb-4">
-    <header><Link to="/" className="inline-flex items-center gap-2 text-xs text-muted-foreground"><ArrowLeft className="size-3.5" /> Portfolio</Link><p className="mt-4 text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">Wallet settings</p><h1 className="mt-1 text-xl font-semibold tracking-tight">Networks</h1><p className="mt-1 text-xs text-muted-foreground">Independent balances, addresses, and request status.</p></header>
     <section className="flex items-center gap-3 rounded-xl border border-border bg-card px-3 py-3"><div className="grid size-9 place-items-center rounded-lg bg-secondary"><WalletCards className="size-4" /></div><div className="min-w-0 flex-1"><p className="text-sm font-semibold">{chains.length} connected networks</p><p className="mt-0.5 text-[11px] text-muted-foreground">Tap a network to inspect its address and response.</p></div></section>
     {!chains.length ? <section className="rounded-xl border border-border bg-card px-4 py-10 text-center"><p className="text-sm font-medium">No networks connected</p><p className="mt-1 text-xs text-muted-foreground">Create or restore a wallet and select the networks you need.</p></section> : <div className="space-y-1.5">{chains.map((chain, index) => {
       const id = String(chain.chain_id ?? "");
