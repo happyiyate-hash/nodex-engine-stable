@@ -26,7 +26,7 @@ const LOG_KEY = "sable-engine-logs";
 const LOG_LIMIT = 150;
 
 export function getEngineBaseUrl(): string {
-  return (import.meta.env.VITE_NODEX_ENGINE_URL as string | undefined)?.trim().replace(/\/$/, "") || "https://nodex-wallet-engine.onrender.com";
+  return (import.meta.env.VITE_NODEX_ENGINE_URL as string | undefined)?.trim().replace(/\/$/, "") || "https://nodex-engine-stable.onrender.com";
 }
 
 function safeParams(params: Record<string, unknown>) {
