@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, CheckCircle2, CircleAlert, RadioTower } from "lucide-react";
+import { CheckCircle2, CircleAlert, RadioTower } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,7 +25,6 @@ function ConnectionPage() {
   const failed = status.status === "error";
 
   return <div className="space-y-6 pb-4">
-    <header><Link to="/settings" className="inline-flex items-center gap-2 text-sm text-muted-foreground"><ArrowLeft className="size-4" /> Settings</Link><p className="mt-5 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">NodeX engine</p><h1 className="mt-1 text-2xl font-semibold tracking-tight">Connection</h1><p className="mt-1 text-sm text-muted-foreground">Configure the live event feed used to update wallet balances while requests are running.</p></header>
     <section className="space-y-4 rounded-2xl border border-border bg-card p-4">
       <div className="flex items-start gap-3"><div className="grid size-11 place-items-center rounded-2xl bg-secondary"><RadioTower className="size-5" /></div><div className="min-w-0 flex-1"><h2 className="font-semibold">Live event stream</h2><p className="mt-1 text-sm text-muted-foreground">NodeX connects automatically when the app opens. Local/embedded engines can stream without a key; only remote hosting needs a configured token.</p></div></div>
       <div className="flex items-center gap-2 rounded-xl bg-secondary/50 px-3 py-3">
