@@ -34,4 +34,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: VITE_NODEX_ENGINE_URL
-        value: https://nodex-wallet-engine.onrender.com
+        value: https://nodex-engine-stable.onrender.com
