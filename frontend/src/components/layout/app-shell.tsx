@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
-import { ArrowLeftRight, Clock, Home, Settings } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, Clock, Home, Settings } from "lucide-react";
 import { SableWordmark } from "@/components/brand/sable-mark";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn, truncateAddress } from "@/lib/utils";
@@ -82,6 +82,7 @@ const NAV = [
 
 export function AppShell() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const pageTitle = pathname.startsWith("/swap") ? "Swap" : pathname.startsWith("/settings") ? "Settings" : pathname.startsWith("/activity") ? "Activity" : pathname.startsWith("/send") ? "Send" : pathname.startsWith("/receive") ? "Receive" : pathname.startsWith("/asset/") ? "Asset details" : pathname.startsWith("/blockchains") ? "Blockchains" : pathname.startsWith("/connection") ? "Engine connection" : pathname.startsWith("/engine-logs") ? "Request logs" : "Wallet";
   const wallet = useWallet((s) => s.wallet);
   const lock = useWallet((s) => s.lock);
   const refresh = usePrices((s) => s.refresh);
@@ -140,7 +141,13 @@ export function AppShell() {
           </nav>
           {wallet && <div className="rounded-lg bg-secondary px-3 py-3 shadow-[var(--shadow-border)]"><p className="text-sm font-medium">{wallet.name}</p><p className="mt-1 font-mono text-xs text-muted-foreground">{truncateAddress(String(wallet.chainAddresses[0]?.address ?? ""), 5)}</p></div>}
         </aside>
-        <div className={cn(pathname !== "/" && "lg:pl-56")}><main className={cn("min-h-dvh w-full", pathname === "/" ? "px-0 pb-0 pt-0" : "px-0 pb-28 pt-0 lg:pb-12")}><Outlet /></main></div>
+        <div className={cn(pathname !== "/" && "lg:pl-56")}>
+          {pathname !== "/" && <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border/70 bg-background/90 px-4 backdrop-blur-xl lg:h-16 lg:px-6">
+            <Link to="/" aria-label="Back to portfolio" title="Back to portfolio" className="grid size-9 shrink-0 place-items-center rounded-full border border-border bg-secondary/60 transition-colors hover:bg-secondary"><ArrowLeft className="size-4" /></Link>
+            <div className="min-w-0"><p className="truncate text-sm font-semibold">{pageTitle}</p><p className="text-[11px] text-muted-foreground">Wallet</p></div>
+          </header>}
+          <main className={cn("min-h-dvh w-full", pathname === "/" ? "px-0 pb-0 pt-0" : "px-0 pb-28 pt-0 lg:pb-12")}><Outlet /></main>
+        </div>
         <nav aria-label="Main navigation" className="fixed inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+0.5rem)] z-40 flex items-stretch gap-2 lg:hidden">
           <div className="flex h-[60px] flex-1 items-center rounded-full border border-white/20 bg-secondary/65 p-1.5 shadow-[0_0_0_1px_rgba(255,255,255,0.06),inset_0_1px_0_rgba(255,255,255,0.22),0_-6px_24px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
             <div className="grid h-full w-full grid-cols-3">
