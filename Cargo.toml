@@ -1,0 +1,55 @@
+[package]
+name = "nodex_wallet_engine"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.78"
+authors = ["Nodex Contributors"]
+license = "MIT"
+description = "A modular, production-grade wallet SDK for Rust and WebAssembly"
+repository = "https://github.com/nodex-wallet/nodex-wallet-engine"
+homepage = "https://github.com/nodex-wallet/nodex-wallet-engine"
+documentation = "https://docs.rs/nodex_wallet_engine"
+readme = "README.md"
+keywords = ["wallet", "sdk", "crypto", "blockchain", "wasm"]
+categories = ["cryptography", "development-tools", "api-bindings"]
+
+[lib]
+name = "nodex_wallet_engine"
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dependencies]
+bs58 = "0.4"
+base64 = "0.22"
+hex = "0.4"
+rand = { version = "0.8", features = ["std_rng"] }
+hmac = "0.12"
+pbkdf2 = { version = "0.12", features = ["simple"] }
+sha2 = "0.10"
+ripemd = "0.1"
+sha3 = "0.10"
+aes-gcm = "0.10"
+ethers = { version = "2.0", features = ["abigen", "rustls"] }
+k256 = { version = "0.13.4", features = ["arithmetic", "ecdsa"] }
+p256 = { version = "0.13", features = ["ecdsa"] }
+ed25519-dalek = "1.0"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+futures = "0.3"
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+async-trait = "0.1"
+warp = "0.3"
+starknet-crypto = "0.8.1"
+schnorrkel = "0.11"
+blake2 = "0.10"
+twox-hash = "1.6"
+unicode-normalization = "0.1"
+
+[dev-dependencies]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

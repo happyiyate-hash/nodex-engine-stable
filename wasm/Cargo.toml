@@ -1,0 +1,17 @@
+[package]
+name = "nodex-wallet-wasm"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Browser-targeted NodeX wallet runtime, built from Rust"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+bip39 = { version = "2", features = ["rand"] }
+getrandom = { version = "0.2", features = ["js"] }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"

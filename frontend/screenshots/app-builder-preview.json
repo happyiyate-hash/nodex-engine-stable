@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sable",
+      "hasCanvas": false,
+      "bodyTextLen": 5,
+      "bodyTextHash": "6994c64b470e4c2ca6d880e4834d9caac551cd61db3e2fa2143d0ad11556a819",
+      "bodyTextPrefix": "Sable",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sable",
+      "hasCanvas": false,
+      "bodyTextLen": 189,
+      "bodyTextHash": "747dfacf5d7726457296cb112010b9e3bfa5b1c8803117e790e280e7df9ccbb8",
+      "bodyTextPrefix": "SABLE A private wallet for digital assets. Self-custodial by des",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,5304 @@
+{
+  "source": "merged_alchemy_and_trustwallet_catalog",
+  "source_branch": "main",
+  "mainnet_only": false,
+  "count": 285,
+  "networks": [
+    {
+      "id": "ethereum-mainnet",
+      "name": "Ethereum Mainnet",
+      "symbol": "ETH",
+      "chain_id": "1",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ethereum-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://eth-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ethereum-sepolia",
+      "name": "Ethereum Sepolia",
+      "symbol": "ETH",
+      "chain_id": "11155111",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ethereum-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://eth-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ethereum-hoodi",
+      "name": "Ethereum Hoodi",
+      "symbol": "ETH",
+      "chain_id": "560048",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ethereum-hoodi",
+      "mainnet": false,
+      "network": "hoodi",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://eth-hoodi.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ethereum-mainnet-beacon",
+      "name": "Ethereum Mainnet Beacon",
+      "symbol": "ETH",
+      "chain_id": "beacon-mainnet",
+      "chain_type": "other",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "alchemy/ethereum-mainnet-beacon",
+      "mainnet": true,
+      "network": "mainnet-beacon",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://eth-mainnetbeacon.g.alchemy.com/v2/{api_key}"
+    },
+    {
+      "id": "ethereum-sepolia-beacon",
+      "name": "Ethereum Sepolia Beacon",
+      "symbol": "ETH",
+      "chain_id": "beacon-sepolia",
+      "chain_type": "other",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "alchemy/ethereum-sepolia-beacon",
+      "mainnet": false,
+      "network": "sepolia-beacon",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://eth-sepoliabeacon.g.alchemy.com/v2/{api_key}"
+    },
+    {
+      "id": "ethereum-hoodi-beacon",
+      "name": "Ethereum Hoodi Beacon",
+      "symbol": "ETH",
+      "chain_id": "beacon-hoodi",
+      "chain_type": "other",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "alchemy/ethereum-hoodi-beacon",
+      "mainnet": false,
+      "network": "hoodi-beacon",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://eth-hoodibeacon.g.alchemy.com/v2/{api_key}"
+    },
+    {
+      "id": "arbitrum-mainnet",
+      "name": "Arbitrum Mainnet",
+      "symbol": "ETH",
+      "chain_id": "42161",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/arbitrum-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://arb-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "arbitrum-sepolia",
+      "name": "Arbitrum Sepolia",
+      "symbol": "ETH",
+      "chain_id": "421614",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/arbitrum-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://arb-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "flow-evm-mainnet",
+      "name": "Flow EVM Mainnet",
+      "symbol": "FLOW",
+      "chain_id": "747",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/flow-evm-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://flow-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "flow-evm-testnet",
+      "name": "Flow EVM Testnet",
+      "symbol": "FLOW",
+      "chain_id": "545",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/flow-evm-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://flow-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "polygon-mainnet",
+      "name": "Polygon Mainnet",
+      "symbol": "POL",
+      "chain_id": "137",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/polygon-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://polygon-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "polygon-amoy",
+      "name": "Polygon Amoy",
+      "symbol": "POL",
+      "chain_id": "80002",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/polygon-amoy",
+      "mainnet": false,
+      "network": "amoy",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://polygon-amoy.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "op-mainnet-mainnet",
+      "name": "OP Mainnet Mainnet",
+      "symbol": "ETH",
+      "chain_id": "10",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/op-mainnet-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://opt-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "op-mainnet-sepolia",
+      "name": "OP Mainnet Sepolia",
+      "symbol": "ETH",
+      "chain_id": "11155420",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/op-mainnet-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://opt-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "solana-mainnet",
+      "name": "Solana Mainnet",
+      "symbol": "SOL",
+      "chain_id": "solana-mainnet",
+      "chain_type": "solana",
+      "derivation_path": "m/44'/501'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/solana-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://solana-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "json_rpc",
+        "method": "getBalance",
+        "params": [
+          "{address}",
+          {
+            "commitment": "finalized"
+          }
+        ],
+        "result_path": "value",
+        "value_encoding": "integer",
+        "decimals": 9,
+        "symbol": "SOL",
+        "asset_name": "Solana",
+        "notes": "Solana JSON-RPC returns lamports in result.value."
+      }
+    },
+    {
+      "id": "solana-devnet",
+      "name": "Solana Devnet",
+      "symbol": "SOL",
+      "chain_id": "solana-devnet",
+      "chain_type": "solana",
+      "derivation_path": "m/44'/501'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/solana-devnet",
+      "mainnet": false,
+      "network": "devnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://solana-devnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "json_rpc",
+        "method": "getBalance",
+        "params": [
+          "{address}",
+          {
+            "commitment": "finalized"
+          }
+        ],
+        "result_path": "value",
+        "value_encoding": "integer",
+        "decimals": 9,
+        "symbol": "SOL",
+        "asset_name": "Solana",
+        "notes": "Solana JSON-RPC returns lamports in result.value."
+      }
+    },
+    {
+      "id": "astar-mainnet",
+      "name": "Astar Mainnet",
+      "symbol": "ASTR",
+      "chain_id": "592",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/astar-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://astar-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "starknet-mainnet",
+      "name": "Starknet Mainnet",
+      "symbol": "STRK",
+      "chain_id": "0x534e5f4d41494e",
+      "chain_type": "starknet",
+      "derivation_path": "m/44'/9004'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/starknet-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://starknet-mainnet.g.alchemy.com/starknet/version/rpc/v0_10/{api_key}",
+      "balance_method": {
+        "executor": "json_rpc",
+        "method": "starknet_call",
+        "params": [
+          {
+            "contract_address": "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+            "entry_point_selector": "0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e",
+            "calldata": [
+              "{address}"
+            ]
+          },
+          "latest"
+        ],
+        "response_mode": "u256_limbs",
+        "decimals": 18,
+        "symbol": "ETH",
+        "asset_name": "Starknet Ether",
+        "notes": "Calls the Starknet ETH token balanceOf method; response is a U256 split into low and high 128-bit limbs."
+      }
+    },
+    {
+      "id": "starknet-sepolia",
+      "name": "Starknet Sepolia",
+      "symbol": "STRK",
+      "chain_id": "0x534e5f5345504f4c4941",
+      "chain_type": "starknet",
+      "derivation_path": "m/44'/9004'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/starknet-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://starknet-sepolia.g.alchemy.com/starknet/version/rpc/v0_10/{api_key}",
+      "balance_method": {
+        "executor": "json_rpc",
+        "method": "starknet_call",
+        "params": [
+          {
+            "contract_address": "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+            "entry_point_selector": "0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e",
+            "calldata": [
+              "{address}"
+            ]
+          },
+          "latest"
+        ],
+        "response_mode": "u256_limbs",
+        "decimals": 18,
+        "symbol": "ETH",
+        "asset_name": "Starknet Ether",
+        "notes": "Calls the Starknet ETH token balanceOf method; response is a U256 split into low and high 128-bit limbs."
+      }
+    },
+    {
+      "id": "boba-mainnet",
+      "name": "Boba Mainnet",
+      "symbol": "ETH",
+      "chain_id": "288",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/boba-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://boba-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "boba-sepolia",
+      "name": "Boba Sepolia",
+      "symbol": "ETH",
+      "chain_id": "28882",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/boba-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://boba-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "adi-testnet-ab",
+      "name": "ADI Testnet AB",
+      "symbol": "ADI",
+      "chain_id": "adi-testnet-ab",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/adi-testnet-ab",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://adi-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "adi-mainnet",
+      "name": "ADI Mainnet",
+      "symbol": "ADI",
+      "chain_id": "adi-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/adi-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://adi-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "stable-mainnet",
+      "name": "Stable Mainnet",
+      "symbol": "STABLE",
+      "chain_id": "stable-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/stable-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://stable-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "stable-testnet",
+      "name": "Stable Testnet",
+      "symbol": "STABLE",
+      "chain_id": "stable-testnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/stable-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://stable-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "base-mainnet",
+      "name": "Base Mainnet",
+      "symbol": "ETH",
+      "chain_id": "8453",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/base-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://base-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "base-sepolia",
+      "name": "Base Sepolia",
+      "symbol": "ETH",
+      "chain_id": "84532",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/base-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://base-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "citrea-testnet",
+      "name": "Citrea Testnet",
+      "symbol": "cBTC",
+      "chain_id": "5115",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/citrea-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://citrea-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "citrea-mainnet",
+      "name": "Citrea Mainnet",
+      "symbol": "cBTC",
+      "chain_id": "4114",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/citrea-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://citrea-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "tron-mainnet",
+      "name": "Tron Mainnet",
+      "symbol": "TRX",
+      "chain_id": "195",
+      "chain_type": "tron",
+      "derivation_path": "m/44'/195'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/tron-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://tron-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_post",
+        "path": "/wallet/getaccount",
+        "body": {
+          "address": "{address}",
+          "visible": true
+        },
+        "result_path": "balance",
+        "response_mode": "tron_account",
+        "value_encoding": "integer",
+        "empty_object_is_zero": true,
+        "missing_result_is_zero": true,
+        "decimals": 6,
+        "symbol": "TRX",
+        "asset_name": "TRON",
+        "notes": "TRON HTTP API returns SUN in balance; 1 TRX = 1000000 SUN."
+      }
+    },
+    {
+      "id": "tron-testnet",
+      "name": "Tron Testnet",
+      "symbol": "TRX",
+      "chain_id": "tron-testnet",
+      "chain_type": "tron",
+      "derivation_path": "m/44'/195'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/tron-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://tron-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_post",
+        "path": "/wallet/getaccount",
+        "body": {
+          "address": "{address}",
+          "visible": true
+        },
+        "result_path": "balance",
+        "value_encoding": "integer",
+        "empty_object_is_zero": true,
+        "decimals": 6,
+        "symbol": "TRX",
+        "asset_name": "TRON",
+        "notes": "TRON HTTP API returns SUN in balance; 1 TRX = 1000000 SUN."
+      }
+    },
+    {
+      "id": "tempo-mainnet",
+      "name": "Tempo Mainnet",
+      "symbol": "USD",
+      "chain_id": "4217",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/tempo-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://tempo-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "tempo-moderato",
+      "name": "Tempo Moderato",
+      "symbol": "USD",
+      "chain_id": "tempo-moderato",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/tempo-moderato",
+      "mainnet": false,
+      "network": "moderato",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://tempo-moderato.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "mythos-mainnet",
+      "name": "Mythos Mainnet",
+      "symbol": "MYTH",
+      "chain_id": "mythos-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/mythos-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://mythos-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zksync-mainnet",
+      "name": "ZKsync Mainnet",
+      "symbol": "ETH",
+      "chain_id": "324",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/zksync-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://zksync-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zksync-sepolia",
+      "name": "ZKsync Sepolia",
+      "symbol": "ETH",
+      "chain_id": "300",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/zksync-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://zksync-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zora-mainnet",
+      "name": "Zora Mainnet",
+      "symbol": "ETH",
+      "chain_id": "7777777",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/zora-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://zora-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zora-sepolia",
+      "name": "Zora Sepolia",
+      "symbol": "ETH",
+      "chain_id": "999999999",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/zora-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://zora-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "frax-mainnet",
+      "name": "Frax Mainnet",
+      "symbol": "frxETH",
+      "chain_id": "252",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/frax-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://frax-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bnb-smart-chain-mainnet",
+      "name": "BNB Smart Chain Mainnet",
+      "symbol": "BNB",
+      "chain_id": "56",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bnb-smart-chain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bnb-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bnb-smart-chain-testnet",
+      "name": "BNB Smart Chain Testnet",
+      "symbol": "tBNB",
+      "chain_id": "97",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bnb-smart-chain-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bnb-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "avalanche-mainnet",
+      "name": "Avalanche Mainnet",
+      "symbol": "AVAX",
+      "chain_id": "43114",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/avalanche-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://avax-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "avalanche-fuji",
+      "name": "Avalanche Fuji",
+      "symbol": "AVAX",
+      "chain_id": "43113",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/avalanche-fuji",
+      "mainnet": false,
+      "network": "fuji",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://avax-fuji.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "world-chain-mainnet",
+      "name": "World Chain Mainnet",
+      "symbol": "ETH",
+      "chain_id": "480",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/world-chain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://worldchain-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "world-chain-sepolia",
+      "name": "World Chain Sepolia",
+      "symbol": "ETH",
+      "chain_id": "4801",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/world-chain-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://worldchain-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zetachain-mainnet",
+      "name": "ZetaChain Mainnet",
+      "symbol": "ZETA",
+      "chain_id": "7000",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/zetachain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://zetachain-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zetachain-testnet",
+      "name": "ZetaChain Testnet",
+      "symbol": "ZETA",
+      "chain_id": "7001",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/zetachain-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://zetachain-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "blast-mainnet",
+      "name": "Blast Mainnet",
+      "symbol": "ETH",
+      "chain_id": "81457",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/blast-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://blast-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "blast-sepolia",
+      "name": "Blast Sepolia",
+      "symbol": "ETH",
+      "chain_id": "168587773",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/blast-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://blast-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "scroll-mainnet",
+      "name": "Scroll Mainnet",
+      "symbol": "ETH",
+      "chain_id": "534352",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/scroll-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://scroll-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "linea-mainnet",
+      "name": "Linea Mainnet",
+      "symbol": "ETH",
+      "chain_id": "59144",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/linea-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://linea-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "linea-sepolia",
+      "name": "Linea Sepolia",
+      "symbol": "ETH",
+      "chain_id": "59141",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/linea-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://linea-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "gnosis-mainnet",
+      "name": "Gnosis Mainnet",
+      "symbol": "xDAI",
+      "chain_id": "100",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/gnosis-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://gnosis-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "gnosis-chiado",
+      "name": "Gnosis Chiado",
+      "symbol": "xDAI",
+      "chain_id": "10200",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/gnosis-chiado",
+      "mainnet": false,
+      "network": "chiado",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://gnosis-chiado.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "mantle-mainnet",
+      "name": "Mantle Mainnet",
+      "symbol": "MNT",
+      "chain_id": "5000",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/mantle-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://mantle-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "mantle-sepolia",
+      "name": "Mantle Sepolia",
+      "symbol": "MNT",
+      "chain_id": "5003",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/mantle-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://mantle-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "celo-mainnet",
+      "name": "Celo Mainnet",
+      "symbol": "CELO",
+      "chain_id": "42220",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/celo-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://celo-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "celo-sepolia",
+      "name": "Celo Sepolia",
+      "symbol": "CELO",
+      "chain_id": "11142220",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/celo-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://celo-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "berachain-mainnet",
+      "name": "Berachain Mainnet",
+      "symbol": "BERA",
+      "chain_id": "80094",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/berachain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://berachain-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "berachain-bepolia",
+      "name": "Berachain Bepolia",
+      "symbol": "BERA",
+      "chain_id": "80069",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/berachain-bepolia",
+      "mainnet": false,
+      "network": "bepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://berachain-bepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "metis-mainnet",
+      "name": "Metis Mainnet",
+      "symbol": "METIS",
+      "chain_id": "1088",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/metis-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://metis-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "opbnb-mainnet",
+      "name": "opBNB Mainnet",
+      "symbol": "BNB",
+      "chain_id": "204",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/opbnb-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://opbnb-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "opbnb-testnet",
+      "name": "opBNB Testnet",
+      "symbol": "tBNB",
+      "chain_id": "5611",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/opbnb-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://opbnb-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "shape-mainnet",
+      "name": "Shape Mainnet",
+      "symbol": "ETH",
+      "chain_id": "360",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/shape-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://shape-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "shape-sepolia",
+      "name": "Shape Sepolia",
+      "symbol": "ETH",
+      "chain_id": "11011",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/shape-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://shape-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bob-mainnet",
+      "name": "BOB Mainnet",
+      "symbol": "ETH",
+      "chain_id": "60808",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bob-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bob-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bob-sepolia",
+      "name": "BOB Sepolia",
+      "symbol": "ETH",
+      "chain_id": "808813",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bob-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bob-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "crossfi-testnet",
+      "name": "CrossFi Testnet",
+      "symbol": "MPX",
+      "chain_id": "4158",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/crossfi-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://crossfi-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "crossfi-mainnet",
+      "name": "CrossFi Mainnet",
+      "symbol": "MPX",
+      "chain_id": "4157",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/crossfi-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://crossfi-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "mode-mainnet",
+      "name": "Mode Mainnet",
+      "symbol": "ETH",
+      "chain_id": "34443",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/mode-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://mode-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "mode-sepolia",
+      "name": "Mode Sepolia",
+      "symbol": "ETH",
+      "chain_id": "919",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/mode-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://mode-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "moonbeam-mainnet",
+      "name": "Moonbeam Mainnet",
+      "symbol": "GLMR",
+      "chain_id": "1284",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/moonbeam-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://moonbeam-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "sei-mainnet",
+      "name": "Sei Mainnet",
+      "symbol": "SEI",
+      "chain_id": "1329",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/sei-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://sei-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "sei-testnet",
+      "name": "Sei Testnet",
+      "symbol": "SEI",
+      "chain_id": "1328",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/sei-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://sei-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "anime-mainnet",
+      "name": "Anime Mainnet",
+      "symbol": "ANIME",
+      "chain_id": "anime-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/anime-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://anime-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "anime-sepolia",
+      "name": "Anime Sepolia",
+      "symbol": "ANIME",
+      "chain_id": "anime-sepolia",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/anime-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://anime-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "apechain-mainnet",
+      "name": "ApeChain Mainnet",
+      "symbol": "APE",
+      "chain_id": "33139",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/apechain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://apechain-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "apechain-curtis",
+      "name": "ApeChain Curtis",
+      "symbol": "APE",
+      "chain_id": "33111",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/apechain-curtis",
+      "mainnet": false,
+      "network": "curtis",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://apechain-curtis.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "lens-mainnet",
+      "name": "Lens Mainnet",
+      "symbol": "GHO",
+      "chain_id": "232",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/lens-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://lens-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "lens-sepolia",
+      "name": "Lens Sepolia",
+      "symbol": "GHO",
+      "chain_id": "37111",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/lens-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://lens-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "soneium-mainnet",
+      "name": "Soneium Mainnet",
+      "symbol": "ETH",
+      "chain_id": "1868",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/soneium-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://soneium-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "soneium-minato",
+      "name": "Soneium Minato",
+      "symbol": "ETH",
+      "chain_id": "1946",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/soneium-minato",
+      "mainnet": false,
+      "network": "minato",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://soneium-minato.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "rootstock-mainnet",
+      "name": "Rootstock Mainnet",
+      "symbol": "RBTC",
+      "chain_id": "30",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/rootstock-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://rootstock-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "rootstock-testnet",
+      "name": "Rootstock Testnet",
+      "symbol": "tRBTC",
+      "chain_id": "31",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/rootstock-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://rootstock-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "unichain-mainnet",
+      "name": "Unichain Mainnet",
+      "symbol": "ETH",
+      "chain_id": "130",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/unichain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://unichain-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "unichain-sepolia",
+      "name": "Unichain Sepolia",
+      "symbol": "ETH",
+      "chain_id": "1301",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/unichain-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://unichain-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "sonic-mainnet",
+      "name": "Sonic Mainnet",
+      "symbol": "S",
+      "chain_id": "146",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/sonic-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://sonic-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "sonic-testnet",
+      "name": "Sonic Testnet",
+      "symbol": "S",
+      "chain_id": "57054",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/sonic-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://sonic-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "xmtp-ropsten",
+      "name": "XMTP Ropsten",
+      "symbol": "ETH",
+      "chain_id": "ropsten",
+      "chain_type": "other",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "alchemy/xmtp-ropsten",
+      "mainnet": false,
+      "network": "ropsten",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://xmtp-ropsten.g.alchemy.com/v2/{api_key}"
+    },
+    {
+      "id": "abstract-mainnet",
+      "name": "Abstract Mainnet",
+      "symbol": "ETH",
+      "chain_id": "2741",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/abstract-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://abstract-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "abstract-testnet",
+      "name": "Abstract Testnet",
+      "symbol": "ETH",
+      "chain_id": "11124",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/abstract-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://abstract-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "monad-testnet",
+      "name": "Monad Testnet",
+      "symbol": "MON",
+      "chain_id": "10143",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/monad-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://monad-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "monad-mainnet",
+      "name": "Monad Mainnet",
+      "symbol": "MON",
+      "chain_id": "143",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/monad-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://monad-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "superseed-mainnet",
+      "name": "Superseed Mainnet",
+      "symbol": "ETH",
+      "chain_id": "5330",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/superseed-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://superseed-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "superseed-sepolia",
+      "name": "Superseed Sepolia",
+      "symbol": "ETH",
+      "chain_id": "53302",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/superseed-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://superseed-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "settlus-mainnet",
+      "name": "Settlus Mainnet",
+      "symbol": "SETTLUS",
+      "chain_id": "settlus-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/settlus-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://settlus-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "settlus-sepolia",
+      "name": "Settlus Sepolia",
+      "symbol": "SETTLUS",
+      "chain_id": "settlus-sepolia",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/settlus-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://settlus-septestnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ink-mainnet",
+      "name": "Ink Mainnet",
+      "symbol": "ETH",
+      "chain_id": "57073",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ink-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://ink-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ink-sepolia",
+      "name": "Ink Sepolia",
+      "symbol": "ETH",
+      "chain_id": "763373",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ink-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://ink-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ronin-mainnet",
+      "name": "Ronin Mainnet",
+      "symbol": "RON",
+      "chain_id": "2020",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ronin-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://ronin-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ronin-saigon",
+      "name": "Ronin Saigon",
+      "symbol": "RON",
+      "chain_id": "2021",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/ronin-saigon",
+      "mainnet": false,
+      "network": "saigon",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://ronin-saigon.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "humanity-mainnet",
+      "name": "Humanity Mainnet",
+      "symbol": "H",
+      "chain_id": "698538",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/humanity-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://humanity-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "gensyn-testnet",
+      "name": "Gensyn Testnet",
+      "symbol": "AI",
+      "chain_id": "gensyn-testnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/gensyn-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://gensyn-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "gensyn-mainnet",
+      "name": "Gensyn Mainnet",
+      "symbol": "AI",
+      "chain_id": "gensyn-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/gensyn-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://gensyn-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "rise-testnet",
+      "name": "Rise Testnet",
+      "symbol": "ETH",
+      "chain_id": "rise-testnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/rise-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://rise-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bitcoin-mainnet",
+      "name": "Bitcoin Mainnet",
+      "symbol": "BTC",
+      "chain_id": "bitcoin",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/0'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bitcoin-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bitcoin-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "BTC",
+        "asset_name": "Bitcoin Mainnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      },
+      "p2pkh_version": 0,
+      "p2sh_version": 5,
+      "bech32_hrp": "bc",
+      "address_type": "p2wpkh"
+    },
+    {
+      "id": "bitcoin-testnet",
+      "name": "Bitcoin Testnet",
+      "symbol": "BTC",
+      "chain_id": "bitcoin-testnet",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/1'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bitcoin-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bitcoin-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "BTC",
+        "asset_name": "Bitcoin Testnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      }
+    },
+    {
+      "id": "bitcoin-signet",
+      "name": "Bitcoin Signet",
+      "symbol": "BTC",
+      "chain_id": "bitcoin-signet",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/1'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bitcoin-signet",
+      "mainnet": false,
+      "network": "signet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bitcoin-signet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "BTC",
+        "asset_name": "Bitcoin Signet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      }
+    },
+    {
+      "id": "bitcoin-testnet4",
+      "name": "Bitcoin Testnet4",
+      "symbol": "BTC",
+      "chain_id": "bitcoin-testnet4",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/1'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bitcoin-testnet4",
+      "mainnet": false,
+      "network": "testnet4",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bitcoin-testnet4.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "BTC",
+        "asset_name": "Bitcoin Testnet4",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      }
+    },
+    {
+      "id": "data-network-mainnet",
+      "name": "DATA Network Mainnet",
+      "symbol": "IP",
+      "chain_id": "1513",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/data-network-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://story-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "data-network-aeneid",
+      "name": "DATA Network Aeneid",
+      "symbol": "IP",
+      "chain_id": "1315",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/data-network-aeneid",
+      "mainnet": false,
+      "network": "aeneid",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://story-aeneid.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "megaeth-mainnet",
+      "name": "MegaETH Mainnet",
+      "symbol": "ETH",
+      "chain_id": "4326",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/megaeth-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://megaeth-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "megaeth-testnet",
+      "name": "MegaETH Testnet",
+      "symbol": "ETH",
+      "chain_id": "6343",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/megaeth-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://megaeth-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "dogecoin-mainnet",
+      "name": "Dogecoin Mainnet",
+      "symbol": "DOGE",
+      "chain_id": "dogecoin",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/3'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/dogecoin-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://dogecoin-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "DOGE",
+        "asset_name": "Dogecoin Mainnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      },
+      "p2pkh_version": 30,
+      "p2sh_version": 22,
+      "address_type": "p2pkh"
+    },
+    {
+      "id": "injective-testnet",
+      "name": "Injective Testnet",
+      "symbol": "INJ",
+      "chain_id": "1439",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/injective-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://injective-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      },
+      "address_format": "evm"
+    },
+    {
+      "id": "elysium-testnet",
+      "name": "Elysium Testnet",
+      "symbol": "ELS",
+      "chain_id": "1338",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/elysium-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://elysium-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "alpen-testnet",
+      "name": "Alpen Testnet",
+      "symbol": "ETH",
+      "chain_id": "alpen-testnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/alpen-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://alpen-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "jovay-testnet",
+      "name": "Jovay Testnet",
+      "symbol": "ETH",
+      "chain_id": "jovay-testnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/jovay-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://jovay-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "pharos-atlantic",
+      "name": "Pharos Atlantic",
+      "symbol": "PHAROS",
+      "chain_id": "pharos-atlantic",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/pharos-atlantic",
+      "mainnet": false,
+      "network": "atlantic",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://pharos-atlantic.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "kaia-mainnet",
+      "name": "Kaia Mainnet",
+      "symbol": "KAIA",
+      "chain_id": "8217",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/kaia-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://kaia-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "kaia-testnet",
+      "name": "Kaia Testnet",
+      "symbol": "KAIA",
+      "chain_id": "1001",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/kaia-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://kaia-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "injective-mainnet",
+      "name": "Injective Mainnet",
+      "symbol": "INJ",
+      "chain_id": "1776",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/injective-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://injective-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      },
+      "address_format": "evm"
+    },
+    {
+      "id": "x-layer-mainnet",
+      "name": "X Layer Mainnet",
+      "symbol": "OKB",
+      "chain_id": "196",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/x-layer-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://xlayer-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "katana-mainnet",
+      "name": "Katana Mainnet",
+      "symbol": "KAT",
+      "chain_id": "747474",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/katana-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://katana-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "litecoin-testnet",
+      "name": "Litecoin Testnet",
+      "symbol": "LTC",
+      "chain_id": "litecoin-testnet",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/1'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/litecoin-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://litecoin-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "LTC",
+        "asset_name": "Litecoin Testnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      }
+    },
+    {
+      "id": "jovay-mainnet",
+      "name": "Jovay Mainnet",
+      "symbol": "ETH",
+      "chain_id": "jovay-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/jovay-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://jovay-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "x-layer-testnet",
+      "name": "X Layer Testnet",
+      "symbol": "OKB",
+      "chain_id": "1952",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/x-layer-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://xlayer-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "arc-mainnet",
+      "name": "Arc Mainnet",
+      "symbol": "USDC",
+      "chain_id": "arc-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/arc-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://arc-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "cronos-testnet",
+      "name": "Cronos Testnet",
+      "symbol": "TCRO",
+      "chain_id": "338",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/cronos-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://cronos-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "katana-bokuto",
+      "name": "Katana Bokuto",
+      "symbol": "KAT",
+      "chain_id": "737373",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/katana-bokuto",
+      "mainnet": false,
+      "network": "bokuto",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://katana-bokuto.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bitcoin-cash-testnet",
+      "name": "Bitcoin Cash Testnet",
+      "symbol": "BCH",
+      "chain_id": "bitcoin-cash-testnet",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/1'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bitcoin-cash-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bitcoincash-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "BCH",
+        "asset_name": "Bitcoin Cash Testnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      }
+    },
+    {
+      "id": "litecoin-mainnet",
+      "name": "Litecoin Mainnet",
+      "symbol": "LTC",
+      "chain_id": "litecoin",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/2'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/litecoin-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://litecoin-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "LTC",
+        "asset_name": "Litecoin Mainnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      },
+      "p2pkh_version": 48,
+      "p2sh_version": 50,
+      "bech32_hrp": "ltc",
+      "address_type": "p2wpkh"
+    },
+    {
+      "id": "giwa-sepolia",
+      "name": "Giwa Sepolia",
+      "symbol": "ETH",
+      "chain_id": "91342",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/giwa-sepolia",
+      "mainnet": false,
+      "network": "sepolia",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://giwa-sepolia.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "cronos-mainnet",
+      "name": "Cronos Mainnet",
+      "symbol": "CRO",
+      "chain_id": "25",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/cronos-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://cronos-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "pharos-mainnet",
+      "name": "Pharos Mainnet",
+      "symbol": "PHAROS",
+      "chain_id": "pharos-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/pharos-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://pharos-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "bitcoin-cash-mainnet",
+      "name": "Bitcoin Cash Mainnet",
+      "symbol": "BCH",
+      "chain_id": "bitcoin-cash",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/145'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/bitcoin-cash-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://bitcoincash-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v2/address/{address}",
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "BCH",
+        "asset_name": "Bitcoin Cash Mainnet",
+        "notes": "Alchemy UTXO REST address endpoint; balance is returned in the chain's smallest unit.",
+        "response_mode": "sum_fields",
+        "balance_fields": [
+          "balance",
+          "unconfirmedBalance"
+        ]
+      },
+      "p2pkh_version": 0,
+      "p2sh_version": 5,
+      "address_type": "p2pkh"
+    },
+    {
+      "id": "rise-mainnet",
+      "name": "Rise Mainnet",
+      "symbol": "ETH",
+      "chain_id": "11155931",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/rise-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://rise-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "worldmobilechain-mainnet",
+      "name": "WorldMobileChain Mainnet",
+      "symbol": "WMTX",
+      "chain_id": "worldmobilechain-mainnet",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/worldmobilechain-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://worldmobilechain-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "hyperliquid-mainnet",
+      "name": "Hyperliquid Mainnet",
+      "symbol": "HYPE",
+      "chain_id": "999",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/hyperliquid-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://hyperliquid-mainnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "hyperliquid-testnet",
+      "name": "Hyperliquid Testnet",
+      "symbol": "HYPE",
+      "chain_id": "998",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "alchemy/hyperliquid-testnet",
+      "mainnet": false,
+      "network": "testnet",
+      "rpc_provider": "alchemy",
+      "rpc_url": "https://hyperliquid-testnet.g.alchemy.com/v2/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "acala",
+      "name": "Acala",
+      "symbol": "ACA",
+      "chain_id": "787",
+      "chain_type": "other",
+      "derivation_path": "m/44'/787'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/acala",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "acalaevm",
+      "name": "Acala EVM",
+      "symbol": "ACA",
+      "chain_id": "787",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/acalaevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://acala-rpc.aca-api.network/evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "aeternity",
+      "name": "Aeternity",
+      "symbol": "AE",
+      "chain_id": "457",
+      "chain_type": "other",
+      "derivation_path": "m/44'/457'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/aeternity",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "agoric",
+      "name": "Agoric",
+      "symbol": "BLD",
+      "chain_id": "agoric-3",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/564'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/agoric",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://agoric-api.polkachu.com",
+      "bech32_hrp": "agoric",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "BLD",
+        "asset_name": "Agoric",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "ubld",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "aion",
+      "name": "Aion",
+      "symbol": "AION",
+      "chain_id": "425",
+      "chain_type": "other",
+      "derivation_path": "m/44'/425'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/aion",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "akash",
+      "name": "Akash",
+      "symbol": "AKT",
+      "chain_id": "akashnet-2",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/akash",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://akash-api.polkachu.com",
+      "bech32_hrp": "akash",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "AKT",
+        "asset_name": "Akash",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "uakt",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "algorand",
+      "name": "Algorand",
+      "symbol": "ALGO",
+      "chain_id": "283",
+      "chain_type": "algorand",
+      "derivation_path": "m/44'/283'/0'/0'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/algorand",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://mainnet-api.algonode.cloud",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/v2/accounts/{address}",
+        "result_path": "amount",
+        "response_mode": "algorand_account",
+        "value_encoding": "integer",
+        "decimals": 6,
+        "symbol": "ALGO",
+        "asset_name": "Algorand"
+      }
+    },
+    {
+      "id": "aptos",
+      "name": "Aptos",
+      "symbol": "APT",
+      "chain_id": "1",
+      "chain_type": "aptos",
+      "derivation_path": "m/44'/637'/0'/0'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/aptos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://fullnode.mainnet.aptoslabs.com/v1",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/accounts/{address}/balance/0x1::aptos_coin::AptosCoin",
+        "result_path": "",
+        "response_mode": "aptos_account",
+        "token_discovery": {
+          "path": "/accounts/{address}/resources"
+        },
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "APT",
+        "asset_name": "Aptos"
+      }
+    },
+    {
+      "id": "ark",
+      "name": "Ark",
+      "symbol": "ARK",
+      "chain_id": "ark",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/ark",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "aryacoin",
+      "name": "Aryacoin",
+      "symbol": "ARYACO",
+      "chain_id": "aryacoin",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/aryacoin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "symbol": "ETH",
+      "chain_id": "1313161554",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/aurora",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://mainnet.aurora.dev",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "avalanchex",
+      "name": "Avalanchex",
+      "symbol": "AVALAN",
+      "chain_id": "avalanchex",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/avalanchex",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "axelar",
+      "name": "Axelar",
+      "symbol": "AXL",
+      "chain_id": "axelar-dojo-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/axelar",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://axelar-lcd.quickapi.com",
+      "bech32_hrp": "axelar",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "AXL",
+        "asset_name": "Axelar",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "uaxl",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "band",
+      "name": "BandChain",
+      "symbol": "BAND",
+      "chain_id": "laozi-mainnet",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/494'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/band",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://laozi1.bandchain.org/api",
+      "bech32_hrp": "band",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "BAND",
+        "asset_name": "BandChain",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "uband",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "bitcoingold",
+      "name": "Bitcoin Gold",
+      "symbol": "BTG",
+      "chain_id": "156",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/156'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/bitcoingold",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 38,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "BTG",
+        "asset_name": "Bitcoin Gold",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "bluzelle",
+      "name": "Bluzelle",
+      "symbol": "BLZ",
+      "chain_id": "483",
+      "chain_type": "other",
+      "derivation_path": "m/44'/483'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/bluzelle",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "binance",
+      "name": "BNB Beacon Chain",
+      "symbol": "BNB",
+      "chain_id": "Binance-Chain-Tigris",
+      "chain_type": "bep2",
+      "derivation_path": "m/44'/714'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/binance",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v1/account/{address}",
+        "response_mode": "bep2_balances",
+        "notes": "BNB Beacon Chain account API; sums free, locked, and frozen balances."
+      }
+    },
+    {
+      "id": "greenfield",
+      "name": "BNB Greenfield",
+      "symbol": "BNB",
+      "chain_id": "1017",
+      "chain_type": "other",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/greenfield",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "bouncebit",
+      "name": "BounceBit",
+      "symbol": "BB",
+      "chain_id": "6001",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/bouncebit",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "btcdiamond",
+      "name": "Btcdiamond",
+      "symbol": "BTCDIA",
+      "chain_id": "btcdiamond",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/btcdiamond",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "callisto",
+      "name": "Callisto",
+      "symbol": "CLO",
+      "chain_id": "820",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/callisto",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "cardano",
+      "name": "Cardano",
+      "symbol": "ADA",
+      "chain_id": "1815",
+      "chain_type": "cardano",
+      "derivation_path": "m/1852'/1815'/0'/0'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/cardano",
+      "mainnet": true,
+      "rpc_provider": "blockfrost",
+      "rpc_url": "https://cardano-mainnet.blockfrost.io/api/v0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/addresses/{address}",
+        "response_mode": "cardano_amounts",
+        "headers": {
+          "project_id": {
+            "env": "BLOCKFROST_PROJECT_ID"
+          }
+        },
+        "symbol": "ADA",
+        "asset_name": "Cardano",
+        "decimals": 6,
+        "notes": "Blockfrost address endpoint. Set BLOCKFROST_PROJECT_ID in the engine environment; native lovelace and native assets are normalized from the amount array."
+      }
+    },
+    {
+      "id": "tia",
+      "name": "Celestia",
+      "symbol": "TIA",
+      "chain_id": "celestia",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/tia",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://celestia-rest.publicnode.com",
+      "bech32_hrp": "celestia",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "TIA",
+        "asset_name": "Celestia",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "utia",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "comdex",
+      "name": "Comdex",
+      "symbol": "CMDX",
+      "chain_id": "comdex-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/comdex",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "comdex",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "CMDX",
+        "asset_name": "Comdex",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "cfxevm",
+      "name": "Conflux eSpace",
+      "symbol": "CFX",
+      "chain_id": "1030",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/cfxevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://evm.confluxrpc.com",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "coreum",
+      "name": "Coreum",
+      "symbol": "CORE",
+      "chain_id": "coreum-mainnet-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/990'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/coreum",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "core",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "CORE",
+        "asset_name": "Coreum",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "cosmos",
+      "name": "Cosmos Hub",
+      "symbol": "ATOM",
+      "chain_id": "cosmoshub-4",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/cosmos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://cosmos-rest.publicnode.com",
+      "bech32_hrp": "cosmos",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "ATOM",
+        "asset_name": "Cosmos Hub",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "uatom",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "crescent",
+      "name": "Crescent",
+      "symbol": "CRE",
+      "chain_id": "crescent-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/crescent",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "cre",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "CRE",
+        "asset_name": "Crescent",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "cryptoorg",
+      "name": "Crypto.org",
+      "symbol": "CRO",
+      "chain_id": "crypto-org-chain-mainnet-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/394'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/cryptoorg",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "cro",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "CRO",
+        "asset_name": "Crypto.org",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "dash",
+      "name": "Dash",
+      "symbol": "DASH",
+      "chain_id": "5",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/5'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/dash",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 76,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "DASH",
+        "asset_name": "Dash",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "decred",
+      "name": "Decred",
+      "symbol": "DCR",
+      "chain_id": "42",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/42'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/decred",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 0,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "DCR",
+        "asset_name": "Decred",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "digibyte",
+      "name": "DigiByte",
+      "symbol": "DGB",
+      "chain_id": "20",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/20'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/digibyte",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 30,
+      "bech32_hrp": "dgb",
+      "address_type": "p2wpkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "DGB",
+        "asset_name": "DigiByte",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "ecash",
+      "name": "eCash",
+      "symbol": "XEC",
+      "chain_id": "899",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/899'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/ecash",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 0,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "XEC",
+        "asset_name": "eCash",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "ellaism",
+      "name": "Ellaism",
+      "symbol": "ELLAIS",
+      "chain_id": "ellaism",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/ellaism",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "energyweb",
+      "name": "Energyweb",
+      "symbol": "ENERGY",
+      "chain_id": "energyweb",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/energyweb",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "eos",
+      "name": "EOS",
+      "symbol": "EOS",
+      "chain_id": "194",
+      "chain_type": "other",
+      "derivation_path": "m/44'/194'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/eos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "ether-1",
+      "name": "Ether 1",
+      "symbol": "ETHER",
+      "chain_id": "ether-1",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/ether-1",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "classic",
+      "name": "Ethereum Classic",
+      "symbol": "ETC",
+      "chain_id": "61",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/classic",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://etc.blockscout.com/api/eth-rpc",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ethereumpow",
+      "name": "Ethereumpow",
+      "symbol": "ETHERE",
+      "chain_id": "ethereumpow",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/ethereumpow",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "everscale",
+      "name": "Everscale",
+      "symbol": "EVER",
+      "chain_id": "396",
+      "chain_type": "other",
+      "derivation_path": "m/44'/396'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/everscale",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "evmos",
+      "name": "Evmos",
+      "symbol": "EVMOS",
+      "chain_id": "9001",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/evmos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://evmos-evm.publicnode.com",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "fantom",
+      "name": "Fantom",
+      "symbol": "FTM",
+      "chain_id": "250",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/fantom",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://rpcapi.fantom.network",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "symbol": "FETCH",
+      "chain_id": "fetch",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/fetch",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "fetch",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "FETCH",
+        "asset_name": "Fetch",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "filecoin",
+      "name": "Filecoin",
+      "symbol": "FIL",
+      "chain_id": "461",
+      "chain_type": "other",
+      "derivation_path": "m/44'/461'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/filecoin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "fio",
+      "name": "FIO",
+      "symbol": "FIO",
+      "chain_id": "235",
+      "chain_type": "other",
+      "derivation_path": "m/44'/235'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/fio",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "firo",
+      "name": "Firo",
+      "symbol": "FIRO",
+      "chain_id": "136",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/136'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/firo",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 82,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "FIRO",
+        "asset_name": "Firo",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "zelcash",
+      "name": "Flux",
+      "symbol": "FLUX",
+      "chain_id": "19167",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/19167'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/zelcash",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 60,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "FLUX",
+        "asset_name": "Flux",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "fusion",
+      "name": "Fusion",
+      "symbol": "FUSION",
+      "chain_id": "fusion",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/fusion",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "gbnb",
+      "name": "Gbnb",
+      "symbol": "GBNB",
+      "chain_id": "gbnb",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/gbnb",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "gochain",
+      "name": "GoChain",
+      "symbol": "GO",
+      "chain_id": "60",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/gochain",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "groestlcoin",
+      "name": "Groestlcoin",
+      "symbol": "GRS",
+      "chain_id": "17",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/17'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/groestlcoin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 36,
+      "bech32_hrp": "grs",
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "GRS",
+        "asset_name": "Groestlcoin",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "harmony",
+      "name": "Harmony",
+      "symbol": "ONE",
+      "chain_id": "1023",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/harmony",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://api.harmony.one",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "hedera",
+      "name": "Hedera",
+      "symbol": "HBAR",
+      "chain_id": "3030",
+      "chain_type": "hedera",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/hedera",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://mainnet-public.mirrornode.hedera.com",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/api/v1/accounts/{address}",
+        "result_path": "balance.balance",
+        "response_mode": "hedera_account",
+        "token_discovery": {
+          "path": "/api/v1/accounts/{address}/tokens?limit=100"
+        },
+        "value_encoding": "integer",
+        "decimals": 8,
+        "symbol": "HBAR",
+        "asset_name": "Hedera"
+      }
+    },
+    {
+      "id": "hoo",
+      "name": "Hoo",
+      "symbol": "HOO",
+      "chain_id": "hoo",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/hoo",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "heco",
+      "name": "Huobi ECO Chain",
+      "symbol": "HT",
+      "chain_id": "128",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/heco",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "hypeevm",
+      "name": "Hypeevm",
+      "symbol": "HYPEEV",
+      "chain_id": "hypeevm",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/hypeevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "icon",
+      "name": "ICON",
+      "symbol": "ICX",
+      "chain_id": "74",
+      "chain_type": "other",
+      "derivation_path": "m/44'/74'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/icon",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "internet_computer",
+      "name": "Internet Computer",
+      "symbol": "ICP",
+      "chain_id": "223",
+      "chain_type": "other",
+      "derivation_path": "m/44'/223'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/internet_computer",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "iost",
+      "name": "IOST",
+      "symbol": "IOST",
+      "chain_id": "291",
+      "chain_type": "other",
+      "derivation_path": "m/44'/899'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/iost",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "iotex",
+      "name": "IoTeX",
+      "symbol": "IOTX",
+      "chain_id": "304",
+      "chain_type": "other",
+      "derivation_path": "m/44'/304'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/iotex",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "iotexevm",
+      "name": "IoTeX EVM",
+      "symbol": "IOTX",
+      "chain_id": "4689",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/iotexevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://babel-api.mainnet.iotex.io",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "iris",
+      "name": "Iris",
+      "symbol": "IRIS",
+      "chain_id": "iris",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/iris",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "iaa",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "IRIS",
+        "asset_name": "Iris",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "juno",
+      "name": "Juno",
+      "symbol": "JUNO",
+      "chain_id": "juno-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/juno",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "juno",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "JUNO",
+        "asset_name": "Juno",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "kava",
+      "name": "Kava",
+      "symbol": "KAVA",
+      "chain_id": "kava_2222-10",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/459'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/kava",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "kava",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "KAVA",
+        "asset_name": "Kava",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "kavaevm",
+      "name": "KavaEvm",
+      "symbol": "KAVA",
+      "chain_id": "2222",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/kavaevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://evm.kava.io",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "kin",
+      "name": "Kin",
+      "symbol": "KIN",
+      "chain_id": "2017",
+      "chain_type": "other",
+      "derivation_path": "m/44'/2017'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/kin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "klaytn",
+      "name": "Klaytn",
+      "symbol": "KLAYTN",
+      "chain_id": "klaytn",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/klaytn",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://public-en.node.kaia.io",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "komodo",
+      "name": "Komodo",
+      "symbol": "KMD",
+      "chain_id": "141",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/141'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/komodo",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 60,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "KMD",
+        "asset_name": "Komodo",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "kcc",
+      "name": "KuCoin Community Chain",
+      "symbol": "KCS",
+      "chain_id": "321",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/kcc",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://rpc-mainnet.kcc.network",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "kujira",
+      "name": "Kujira",
+      "symbol": "KUJI",
+      "chain_id": "kaiyo-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/kujira",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "kujira",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "KUJI",
+        "asset_name": "Kujira",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "kusama",
+      "name": "Kusama",
+      "symbol": "KSM",
+      "chain_id": "434",
+      "chain_type": "polkadot",
+      "derivation_path": "m/44'/434'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/kusama",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://kusama-rpc.polkadot.io",
+      "network": "mainnet"
+    },
+    {
+      "id": "loom",
+      "name": "Loom",
+      "symbol": "LOOM",
+      "chain_id": "loom",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/loom",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "manta",
+      "name": "Manta Pacific",
+      "symbol": "ETH",
+      "chain_id": "169",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/manta",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://pacific-rpc.manta.network/http",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "mars",
+      "name": "Mars Hub",
+      "symbol": "MARS",
+      "chain_id": "mars-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/mars",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "mars",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "MARS",
+        "asset_name": "Mars Hub",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "merlin",
+      "name": "Merlin",
+      "symbol": "BTC",
+      "chain_id": "4200",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/merlin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "meter",
+      "name": "Meter",
+      "symbol": "MTR",
+      "chain_id": "82",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/meter",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "moonriver",
+      "name": "Moonriver",
+      "symbol": "MOVR",
+      "chain_id": "1285",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/moonriver",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://moonriver.api.onfinality.io/public",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "elrond",
+      "name": "MultiversX",
+      "symbol": "eGLD",
+      "chain_id": "508",
+      "chain_type": "other",
+      "derivation_path": "m/44'/508'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/elrond",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "nano",
+      "name": "Nano",
+      "symbol": "XNO",
+      "chain_id": "165",
+      "chain_type": "other",
+      "derivation_path": "m/44'/165'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/nano",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "nativeevmos",
+      "name": "Native Evmos",
+      "symbol": "EVMOS",
+      "chain_id": "evmos_9001-2",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/nativeevmos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "nativecanto",
+      "name": "NativeCanto",
+      "symbol": "CANTO",
+      "chain_id": "canto_7700-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/nativecanto",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "canto",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "CANTO",
+        "asset_name": "NativeCanto",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "near",
+      "name": "NEAR",
+      "symbol": "NEAR",
+      "chain_id": "397",
+      "chain_type": "near",
+      "derivation_path": "m/44'/397'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/near",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://rpc.mainnet.near.org",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "json_rpc",
+        "method": "query",
+        "params": {
+          "request_type": "view_account",
+          "finality": "final",
+          "account_id": "{address}"
+        },
+        "result_path": "amount",
+        "response_mode": "near_account",
+        "value_encoding": "integer",
+        "decimals": 24,
+        "symbol": "NEAR",
+        "asset_name": "NEAR"
+      }
+    },
+    {
+      "id": "neblio",
+      "name": "Neblio",
+      "symbol": "NEBLIO",
+      "chain_id": "neblio",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/0'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/neblio",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 53,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "NEBLIO",
+        "asset_name": "Neblio",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "nebulas",
+      "name": "Nebulas",
+      "symbol": "NAS",
+      "chain_id": "2718",
+      "chain_type": "other",
+      "derivation_path": "m/44'/2718'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/nebulas",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "neo",
+      "name": "NEO",
+      "symbol": "NEO",
+      "chain_id": "888",
+      "chain_type": "other",
+      "derivation_path": "m/44'/888'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/neo",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "neon",
+      "name": "Neon",
+      "symbol": "NEON",
+      "chain_id": "245022934",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/neon",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "nervos",
+      "name": "Nervos",
+      "symbol": "CKB",
+      "chain_id": "309",
+      "chain_type": "other",
+      "derivation_path": "m/44'/309'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/nervos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "neutron",
+      "name": "Neutron",
+      "symbol": "NTRN",
+      "chain_id": "neutron-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/neutron",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "neutron",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "NTRN",
+        "asset_name": "Neutron",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "nimiq",
+      "name": "Nimiq",
+      "symbol": "NIM",
+      "chain_id": "242",
+      "chain_type": "other",
+      "derivation_path": "m/44'/242'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/nimiq",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "noble",
+      "name": "Noble",
+      "symbol": "USDC",
+      "chain_id": "noble-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/noble",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "noble",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "USDC",
+        "asset_name": "Noble",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "nuls",
+      "name": "NULS",
+      "symbol": "NULS",
+      "chain_id": "8964",
+      "chain_type": "other",
+      "derivation_path": "m/44'/8964'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/nuls",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "oasis",
+      "name": "Oasis",
+      "symbol": "ROSE",
+      "chain_id": "474",
+      "chain_type": "other",
+      "derivation_path": "m/44'/474'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/oasis",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "okx",
+      "name": "Okx",
+      "symbol": "OKX",
+      "chain_id": "okx",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/okx",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "okc",
+      "name": "OKX Chain",
+      "symbol": "OKT",
+      "chain_id": "66",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/okc",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://exchainrpc.okex.org",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "okxchain",
+      "name": "Okxchain",
+      "symbol": "OKXCHA",
+      "chain_id": "okxchain",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/okxchain",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ontology",
+      "name": "Ontology",
+      "symbol": "ONT",
+      "chain_id": "1024",
+      "chain_type": "other",
+      "derivation_path": "m/44'/1024'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/ontology",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "osmosis",
+      "name": "Osmosis",
+      "symbol": "OSMO",
+      "chain_id": "osmosis-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/osmosis",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://lcd.osmosis.zone",
+      "bech32_hrp": "osmo",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "OSMO",
+        "asset_name": "Osmosis",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens.",
+        "native_denom": "uosmo",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "pactus",
+      "name": "Pactus",
+      "symbol": "PAC",
+      "chain_id": "21888",
+      "chain_type": "other",
+      "derivation_path": "m/44'/21888'/3'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/pactus",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "persistence",
+      "name": "Persistence",
+      "symbol": "XPRT",
+      "chain_id": "core-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/persistence",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "persistence",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "XPRT",
+        "asset_name": "Persistence",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "pivx",
+      "name": "Pivx",
+      "symbol": "PIVX",
+      "chain_id": "119",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/119'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/pivx",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 30,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "PIVX",
+        "asset_name": "Pivx",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "plasma",
+      "name": "Plasma Mainnet",
+      "symbol": "XPL",
+      "chain_id": "9745",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/plasma",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "platon",
+      "name": "Platon",
+      "symbol": "PLATON",
+      "chain_id": "platon",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/platon",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "poa",
+      "name": "POA Network",
+      "symbol": "POA",
+      "chain_id": "99",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/poa",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "polkadot",
+      "name": "Polkadot",
+      "symbol": "DOT",
+      "chain_id": "354",
+      "chain_type": "polkadot",
+      "derivation_path": "m/44'/354'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/polkadot",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://rpc.polkadot.io",
+      "network": "mainnet"
+    },
+    {
+      "id": "polygonzkevm",
+      "name": "Polygon zkEVM",
+      "symbol": "ETH",
+      "chain_id": "1101",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/polygonzkevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://zkevm-rpc.com",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "qtum",
+      "name": "Qtum",
+      "symbol": "QTUM",
+      "chain_id": "2301",
+      "chain_type": "other",
+      "derivation_path": "m/44'/2301'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/qtum",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "quasar",
+      "name": "Quasar",
+      "symbol": "QSR",
+      "chain_id": "quasar-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/quasar",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "quasar",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "QSR",
+        "asset_name": "Quasar",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "ravencoin",
+      "name": "Ravencoin",
+      "symbol": "RVN",
+      "chain_id": "175",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/175'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/ravencoin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 60,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "RVN",
+        "asset_name": "Ravencoin",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "robinhoodchain",
+      "name": "Robinhood Mainnet",
+      "symbol": "ETH",
+      "chain_id": "4663",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/robinhoodchain",
+      "mainnet": true,
+      "rpc_provider": "infura",
+      "rpc_url": "https://robinhood-mainnet.infura.io/v3/{api_key}",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "secret",
+      "name": "Secret",
+      "symbol": "SCRT",
+      "chain_id": "secret-4",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/529'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/secret",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "secret",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "SCRT",
+        "asset_name": "Secret",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "smartbch",
+      "name": "Smart Bitcoin Cash",
+      "symbol": "BCH",
+      "chain_id": "10000",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/smartbch",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "sommelier",
+      "name": "Sommelier",
+      "symbol": "SOMM",
+      "chain_id": "sommelier-3",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/sommelier",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "somm",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "SOMM",
+        "asset_name": "Sommelier",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "stargaze",
+      "name": "Stargaze",
+      "symbol": "STARS",
+      "chain_id": "stargaze-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/stargaze",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "stars",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "STARS",
+        "asset_name": "Stargaze",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "steem",
+      "name": "Steem",
+      "symbol": "STEEM",
+      "chain_id": "steem",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/steem",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "stellar",
+      "name": "Stellar",
+      "symbol": "XLM",
+      "chain_id": "148",
+      "chain_type": "other",
+      "derivation_path": "m/44'/148'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/stellar",
+      "mainnet": true,
+      "rpc_provider": "infura",
+      "rpc_url": "https://stellar-mainnet.infura.io/v3/{api_key}",
+      "network": "mainnet"
+    },
+    {
+      "id": "stratis",
+      "name": "Stratis",
+      "symbol": "STRAX",
+      "chain_id": "105105",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/105105'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/stratis",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 63,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "STRAX",
+        "asset_name": "Stratis",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "stride",
+      "name": "Stride",
+      "symbol": "STRD",
+      "chain_id": "stride-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/stride",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "stride",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "STRD",
+        "asset_name": "Stride",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "sui",
+      "name": "Sui",
+      "symbol": "SUI",
+      "chain_id": "784",
+      "chain_type": "sui",
+      "derivation_path": "m/44'/784'/0'/0'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/sui",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://graphql.mainnet.sui.io",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_post",
+        "path": "/graphql",
+        "body": {
+          "query": "query { address(address: \"{address}\") { balances { nodes { coinType { repr } totalBalance } } } }"
+        },
+        "response_mode": "sui_graphql_assets",
+        "symbol": "SUI",
+        "asset_name": "Sui",
+        "decimals": 9
+      }
+    },
+    {
+      "id": "syscoin",
+      "name": "Syscoin",
+      "symbol": "SYS",
+      "chain_id": "57",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/57'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/syscoin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 63,
+      "bech32_hrp": "sys",
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "SYS",
+        "asset_name": "Syscoin",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "teritori",
+      "name": "Teritori",
+      "symbol": "TERITO",
+      "chain_id": "teritori",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/teritori",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "terrav2",
+      "name": "Terra",
+      "symbol": "LUNA",
+      "chain_id": "phoenix-1",
+      "chain_type": "other",
+      "derivation_path": "m/44'/330'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/terrav2",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "terra",
+      "name": "Terra Classic",
+      "symbol": "LUNC",
+      "chain_id": "columbus-5",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/330'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/terra",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "terra",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "LUNC",
+        "asset_name": "Terra Classic",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "tezos",
+      "name": "Tezos",
+      "symbol": "XTZ",
+      "chain_id": "1729",
+      "chain_type": "tezos",
+      "derivation_path": "m/44'/1729'/0'/0'",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/tezos",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://api.tzkt.io",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/v1/accounts/{address}/balance",
+        "result_path": "",
+        "response_mode": "tezos_account",
+        "token_discovery": {
+          "path": "/v1/tokens/balances?account={address}&balance.gt=0"
+        },
+        "value_encoding": "integer",
+        "decimals": 6,
+        "symbol": "XTZ",
+        "asset_name": "Tezos"
+      }
+    },
+    {
+      "id": "theta",
+      "name": "Theta",
+      "symbol": "THETA",
+      "chain_id": "500",
+      "chain_type": "other",
+      "derivation_path": "m/44'/500'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/theta",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "thorchain",
+      "name": "THORChain",
+      "symbol": "RUNE",
+      "chain_id": "thorchain-1",
+      "chain_type": "other",
+      "derivation_path": "m/44'/931'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/thorchain",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "thundertoken",
+      "name": "ThunderCore",
+      "symbol": "TT",
+      "chain_id": "108",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/thundertoken",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://mainnet-rpc.thundertoken.net",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "tomochain",
+      "name": "Tomochain",
+      "symbol": "TOMOCH",
+      "chain_id": "tomochain",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/tomochain",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ton",
+      "name": "TON",
+      "symbol": "GRAM",
+      "chain_id": "607",
+      "chain_type": "other",
+      "derivation_path": "m/44'/607'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/ton",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "umee",
+      "name": "Umee",
+      "symbol": "UMEE",
+      "chain_id": "umee-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/umee",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "umee",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "UMEE",
+        "asset_name": "Umee",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "vechain",
+      "name": "VeChain",
+      "symbol": "VET",
+      "chain_id": "74",
+      "chain_type": "other",
+      "derivation_path": "m/44'/818'/0'/0/0",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/vechain",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "verge",
+      "name": "Verge",
+      "symbol": "XVG",
+      "chain_id": "77",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/77'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/verge",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 30,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "XVG",
+        "asset_name": "Verge",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "viacoin",
+      "name": "Viacoin",
+      "symbol": "VIA",
+      "chain_id": "14",
+      "chain_type": "btc",
+      "derivation_path": "m/84'/14'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/viacoin",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 71,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "VIA",
+        "asset_name": "Viacoin",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "wanchain",
+      "name": "Wanchain",
+      "symbol": "WAN",
+      "chain_id": "888",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/wanchain",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://gwan-ssl.wandevs.org:56891",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "waves",
+      "name": "Waves",
+      "symbol": "WAVES",
+      "chain_id": "5741564",
+      "chain_type": "other",
+      "derivation_path": "m/44'/5741564'/0'/0'/0'",
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/waves",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "wemix",
+      "name": "Wemix",
+      "symbol": "WEMIX",
+      "chain_id": "wemix",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/wemix",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "network": "mainnet"
+    },
+    {
+      "id": "xdc",
+      "name": "Xdc",
+      "symbol": "XDC",
+      "chain_id": "50",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/xdc",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://rpc.xdc.org",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "ripple",
+      "name": "XRP",
+      "symbol": "XRP",
+      "chain_id": "144",
+      "chain_type": "xrp",
+      "derivation_path": "m/44'/144'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/ripple",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://xrplcluster.com",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "json_rpc",
+        "method": "account_info",
+        "params": [
+          {
+            "account": "{address}",
+            "ledger_index": "validated"
+          }
+        ],
+        "result_path": "account_data.Balance",
+        "response_mode": "xrp_account",
+        "value_encoding": "integer",
+        "decimals": 6,
+        "symbol": "XRP",
+        "asset_name": "XRP Ledger"
+      }
+    },
+    {
+      "id": "xrplevm",
+      "name": "Xrplevm",
+      "symbol": "XRPLEV",
+      "chain_id": "xrplevm",
+      "chain_type": "other",
+      "derivation_path": null,
+      "adapter_supported": false,
+      "trustwallet_asset_path": "blockchains/xrplevm",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "https://rpc.xrplevm.org",
+      "network": "mainnet"
+    },
+    {
+      "id": "zcash",
+      "name": "Zcash",
+      "symbol": "ZEC",
+      "chain_id": "133",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/133'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/zcash",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 28,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "ZEC",
+        "asset_name": "Zcash",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "zen",
+      "name": "Zen",
+      "symbol": "ZEN",
+      "chain_id": "121",
+      "chain_type": "btc",
+      "derivation_path": "m/44'/121'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/zen",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "p2pkh_version": 32,
+      "address_type": "p2pkh",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/address/{address}",
+        "response_mode": "utxo_address",
+        "decimals": 8,
+        "symbol": "ZEN",
+        "asset_name": "Zen",
+        "notes": "Explorer-style UTXO address response with chain_stats and mempool_stats."
+      }
+    },
+    {
+      "id": "zilliqa",
+      "name": "Zilliqa",
+      "symbol": "ZIL",
+      "chain_id": "313",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/zilliqa",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "zklink",
+      "name": "Zklink",
+      "symbol": "ZKLINK",
+      "chain_id": "zklink",
+      "chain_type": "evm",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/zklink",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "sei",
+      "name": "Sei",
+      "symbol": "SEI",
+      "chain_id": "pacific-1",
+      "chain_type": "cosmos",
+      "derivation_path": "m/44'/118'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "blockchains/sei",
+      "mainnet": true,
+      "rpc_provider": "public",
+      "rpc_url": "",
+      "bech32_hrp": "sei",
+      "network": "mainnet",
+      "balance_method": {
+        "executor": "http_get",
+        "path": "/cosmos/bank/v1beta1/balances/{address}",
+        "response_mode": "cosmos_balances",
+        "symbol": "SEI",
+        "asset_name": "Sei",
+        "notes": "Cosmos SDK bank REST response; native balance is selected by native_denom, with other denoms retained as tokens."
+      }
+    },
+    {
+      "id": "palm-mainnet",
+      "name": "Palm Mainnet",
+      "symbol": "PALM",
+      "chain_id": "11297108109",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "infura/palm-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "infura",
+      "rpc_url": "https://palm-mainnet.infura.io/v3/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    },
+    {
+      "id": "hemi-mainnet",
+      "name": "Hemi Mainnet",
+      "symbol": "ETH",
+      "chain_id": "43111",
+      "chain_type": "evm",
+      "derivation_path": "m/44'/60'/0'/0/0",
+      "adapter_supported": true,
+      "trustwallet_asset_path": "infura/hemi-mainnet",
+      "mainnet": true,
+      "network": "mainnet",
+      "rpc_provider": "infura",
+      "rpc_url": "https://hemi-mainnet.infura.io/v3/{api_key}",
+      "balance_method": {
+        "executor": "evm"
+      }
+    }
+  ],
+  "balance_method_schema_version": 1
+}
