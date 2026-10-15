@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowUpRight, ShieldAlert } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,7 +20,6 @@ function SendPage() {
   const symbol = String(selected?.symbol ?? balance?.native?.symbol ?? "Native asset");
 
   return <div className="space-y-5 pb-4">
-    <header><Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground"><ArrowLeft className="size-4" /> Portfolio</Link><div className="mt-5 flex items-center gap-3"><div className="grid size-11 place-items-center rounded-2xl bg-secondary"><ArrowUpRight className="size-5" /></div><div><p className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">Transfer</p><h1 className="text-2xl font-semibold tracking-tight">Send crypto</h1></div></div><p className="mt-2 text-sm text-muted-foreground">Choose the correct network and enter the recipient details.</p></header>
     <section className="space-y-4 rounded-2xl border border-border bg-card p-4">
       <div className="space-y-2"><Label htmlFor="send-network">Network</Label><select id="send-network" value={networkId || String(selected?.chain_id ?? selected?.name ?? "")} onChange={(event) => setNetworkId(event.target.value)} className="h-12 w-full rounded-xl border border-border bg-background px-3 text-sm outline-none focus:ring-2 focus:ring-ring">{chains.map((chain, index) => <option key={String(chain.chain_id ?? index)} value={String(chain.chain_id ?? chain.name ?? "")}>{String(chain.name ?? chain.chain_type ?? "Blockchain")} · {String(chain.symbol ?? "Native")}</option>)}</select></div>
       <div className="space-y-2"><Label htmlFor="send-recipient">Recipient address</Label><Input id="send-recipient" value={recipient} onChange={(event) => setRecipient(event.target.value)} placeholder="Paste wallet address" autoComplete="off" /><p className="text-xs text-muted-foreground">Only send to an address compatible with the selected network.</p></div>
