@@ -140,7 +140,7 @@ export function AppShell() {
           </nav>
           {wallet && <div className="rounded-lg bg-secondary px-3 py-3 shadow-[var(--shadow-border)]"><p className="text-sm font-medium">{wallet.name}</p><p className="mt-1 font-mono text-xs text-muted-foreground">{truncateAddress(String(wallet.chainAddresses[0]?.address ?? ""), 5)}</p></div>}
         </aside>
-        <div className={cn(pathname !== "/" && "lg:pl-56")}><main className={cn("mx-auto min-h-dvh w-full", pathname === "/" ? "max-w-none px-0 pb-0 pt-0 lg:max-w-none lg:pb-0 lg:pt-0" : "max-w-xl px-5 pb-28 pt-0 lg:max-w-2xl lg:pb-12 lg:pt-10")}><Outlet /></main></div>
+        <div className={cn(pathname !== "/" && "lg:pl-56")}><main className={cn("min-h-dvh w-full", pathname === "/" ? "px-0 pb-0 pt-0" : "px-0 pb-28 pt-0 lg:pb-12")}><Outlet /></main></div>
         <nav aria-label="Main navigation" className="fixed inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+0.5rem)] z-40 flex items-stretch gap-2 lg:hidden">
           <div className="flex h-[60px] flex-1 items-center rounded-full border border-white/20 bg-secondary/65 p-1.5 shadow-[0_0_0_1px_rgba(255,255,255,0.06),inset_0_1px_0_rgba(255,255,255,0.22),0_-6px_24px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
             <div className="grid h-full w-full grid-cols-3">
