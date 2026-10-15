@@ -167,13 +167,13 @@ export function renderWebManifest(hostHeader) {
       start_url: "/",
       scope: "/",
       display: "fullscreen",
-      background_color: "#000000",
-      theme_color: "#000000",
+      background_color: "#09090b",
+      theme_color: "#09090b",
       icons: [
         {
-          src: "/__grok/icon-180.png",
-          sizes: "180x180",
-          type: "image/png",
+          src: "/favicon.svg",
+          sizes: "any",
+          type: "image/svg+xml",
         },
       ],
     },
