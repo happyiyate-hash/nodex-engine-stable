@@ -82,7 +82,7 @@ const NAV = [
 
 export function AppShell() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const pageTitle = pathname.startsWith("/swap") ? "Swap" : pathname.startsWith("/settings") ? "Settings" : pathname.startsWith("/activity") ? "Activity" : pathname.startsWith("/send") ? "Send" : pathname.startsWith("/receive") ? "Receive" : pathname.startsWith("/asset/") ? "Asset details" : pathname.startsWith("/blockchains") ? "Blockchains" : pathname.startsWith("/connection") ? "Engine connection" : pathname.startsWith("/engine-logs") ? "Request logs" : "Wallet";
+  const pageTitle = pathname.startsWith("/swap") ? "Swap" : pathname.startsWith("/settings") ? "Settings" : pathname.startsWith("/activity") ? "Activity" : pathname.startsWith("/send") ? "Send" : pathname.startsWith("/receive") ? "Receive" : pathname.startsWith("/asset/") ? pathname.split("/").pop()?.toUpperCase() ?? "Asset" : pathname.startsWith("/blockchains") ? "Blockchains" : pathname.startsWith("/connection") ? "Engine connection" : pathname.startsWith("/engine-logs") ? "Request logs" : "Wallet";
   const wallet = useWallet((s) => s.wallet);
   const lock = useWallet((s) => s.lock);
   const refresh = usePrices((s) => s.refresh);
