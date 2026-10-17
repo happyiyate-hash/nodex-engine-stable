@@ -9,6 +9,10 @@ type TokenLike = {
   logo_url?: unknown;
   image_url?: unknown;
   icon_url?: unknown;
+  logoUrl?: unknown;
+  imageUrl?: unknown;
+  iconUrl?: unknown;
+  logo?: unknown;
   chainName?: string;
   chainSymbol?: string;
   isNative?: boolean;
@@ -34,7 +38,7 @@ function AssetLogo({
   name: string;
   symbol: string;
 }) {
-  const imageUrl = String(token.logo_url ?? token.image_url ?? token.icon_url ?? "").trim();
+  const imageUrl = String(token.logo_url ?? token.logoUrl ?? token.image_url ?? token.imageUrl ?? token.icon_url ?? token.iconUrl ?? token.logo ?? "").trim();
   const [imageFailed, setImageFailed] = useState(false);
   useEffect(() => setImageFailed(false), [imageUrl]);
   const showImage = Boolean(imageUrl) && !imageFailed;
