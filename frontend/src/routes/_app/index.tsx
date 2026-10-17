@@ -53,7 +53,6 @@ function HomePage() {
   const toggleHide = useWallet((s) => s.toggleHideBalances);
   const prices = usePrices((s) => s.prices);
   const chains = wallet?.chainAddresses ?? [];
-  const successCount = chains.filter((chain) => chainFetchState[String(chain.chain_id ?? chain.name ?? "")]?.status === "success").length;
   const portfolio = useMemo(() => {
     let value = 0;
     let pricedAssets = 0;
