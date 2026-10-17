@@ -123,7 +123,7 @@ export function ProgressiveVirtualTokenList({
               const chainName = String(token.chainName ?? "Blockchain");
               return (
                 <div
-                  key={`${String(token.address ?? symbol || "asset")}-${chainName}-${index}`}
+                  key={`${String(token.address ?? (symbol || "asset"))}-${chainName}-${index}`}
                   className="token-float-row absolute inset-x-0 flex items-center gap-2 py-0.5"
                   style={{ top: index * ROW_HEIGHT, height: ROW_HEIGHT }}
                 >
