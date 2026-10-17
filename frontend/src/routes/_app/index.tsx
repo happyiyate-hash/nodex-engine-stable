@@ -77,6 +77,10 @@ function HomePage() {
       logo_url?: string;
       image_url?: string;
       icon_url?: string;
+      logoUrl?: string;
+      imageUrl?: string;
+      iconUrl?: string;
+      logo?: string;
       chainName: string;
       chainSymbol: string;
       isNative: boolean;
@@ -88,7 +92,7 @@ function HomePage() {
       const balance = balances.find((item) =>
         String(item.chain_id ?? "").trim().toLowerCase() === key.trim().toLowerCase());
       const native = balance?.native;
-      const nativeMeta = native as (typeof native & { logo_url?: string; image_url?: string; icon_url?: string }) | undefined;
+      const nativeMeta = native as (typeof native & { logo_url?: string; image_url?: string; icon_url?: string; logoUrl?: string; imageUrl?: string; iconUrl?: string; logo?: string }) | undefined;
       const chainSymbol = String(chain.symbol ?? native?.symbol ?? name.slice(0, 3)).slice(0, 8).toUpperCase();
       const tokens = (balance?.tokens ?? []).map((token) => {
         const tokenMeta = token as typeof token & { logo_url?: string; image_url?: string; icon_url?: string };
@@ -101,6 +105,10 @@ function HomePage() {
           logo_url: tokenMeta.logo_url,
           image_url: tokenMeta.image_url,
           icon_url: tokenMeta.icon_url,
+          logoUrl: tokenMeta.logoUrl,
+          imageUrl: tokenMeta.imageUrl,
+          iconUrl: tokenMeta.iconUrl,
+          logo: tokenMeta.logo,
           chainName: name,
           chainSymbol,
           isNative: false,
@@ -115,6 +123,10 @@ function HomePage() {
         logo_url: nativeMeta?.logo_url ?? (chain.logo_url as string | undefined),
         image_url: nativeMeta?.image_url ?? (chain.image_url as string | undefined),
         icon_url: nativeMeta?.icon_url ?? (chain.icon_url as string | undefined),
+        logoUrl: nativeMeta?.logoUrl ?? (chain.logoUrl as string | undefined),
+        imageUrl: nativeMeta?.imageUrl ?? (chain.imageUrl as string | undefined),
+        iconUrl: nativeMeta?.iconUrl ?? (chain.iconUrl as string | undefined),
+        logo: nativeMeta?.logo ?? (chain.logo as string | undefined),
         chainName: name,
         chainSymbol,
         isNative: true,
