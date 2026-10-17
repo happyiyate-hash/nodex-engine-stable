@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDownLeft, ArrowUpRight, ArrowLeftRight, Blocks, CheckCircle2, ChevronDown, ChevronUp, CircleAlert, Eye, EyeOff, LoaderCircle, RefreshCw, ShieldCheck } from "lucide-react";
+import { ArrowDownLeft, ArrowUpRight, ArrowLeftRight, Blocks, CheckCircle2, Eye, EyeOff, LoaderCircle, RefreshCw, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { ProgressiveVirtualTokenList } from "@/components/wallet/progressive-virtual-token-list";
@@ -50,14 +50,11 @@ function HomePage() {
   const chainFetchState = useWallet((s) => s.chainFetchState);
   const refreshing = useWallet((s) => s.refreshingBalances);
   const lastRefresh = useWallet((s) => s.lastBalanceRefresh);
-  const lastError = useWallet((s) => s.lastEngineError);
   const refreshBalances = useWallet((s) => s.refreshBalances);
   const hide = useWallet((s) => s.hideBalances);
   const toggleHide = useWallet((s) => s.toggleHideBalances);
   const prices = usePrices((s) => s.prices);
-  const [expandedErrors, setExpandedErrors] = useState<Record<string, boolean>>({});
   const chains = wallet?.chainAddresses ?? [];
-  const derivationErrors = wallet?.derivationErrors ?? [];
   const successCount = chains.filter((chain) => chainFetchState[String(chain.chain_id ?? chain.name ?? "")]?.status === "success").length;
   const portfolio = useMemo(() => {
     let value = 0;
@@ -72,6 +69,73 @@ function HomePage() {
     }
     return { value, pricedAssets };
   }, [balances, prices]);
+
+  const displayItems = useMemo(() => {
+    type DisplayItem = {
+      name: string;
+      symbol: string;
+      balance: unknown;
+      decimals?: number;
+      address?: string;
+      logo_url?: string;
+      image_url?: string;
+      icon_url?: string;
+      chainName: string;
+      chainSymbol: string;
+      isNative: boolean;
+    };
+    const entries = chains.map((chain, index) => {
+      const chainId = String(chain.chain_id ?? "");
+      const key = chainId || String(chain.name ?? index);
+      const name = readableName(chain);
+      const balance = balances.find((item) =>
+        String(item.chain_id ?? "").trim().toLowerCase() === key.trim().toLowerCase());
+      const native = balance?.native;
+      const nativeMeta = native as (typeof native & { logo_url?: string; image_url?: string; icon_url?: string }) | undefined;
+      const chainSymbol = String(chain.symbol ?? native?.symbol ?? name.slice(0, 3)).slice(0, 8).toUpperCase();
+      const tokens = (balance?.tokens ?? []).map((token) => {
+        const tokenMeta = token as typeof token & { logo_url?: string; image_url?: string; icon_url?: string };
+        return {
+          name: String(token.name ?? token.symbol ?? "Unknown token"),
+          symbol: String(token.symbol ?? ""),
+          balance: token.balance,
+          decimals: token.decimals,
+          address: token.address,
+          logo_url: tokenMeta.logo_url,
+          image_url: tokenMeta.image_url,
+          icon_url: tokenMeta.icon_url,
+          chainName: name,
+          chainSymbol,
+          isNative: false,
+        } satisfies DisplayItem;
+      });
+      const nativeItem: DisplayItem = {
+        name: String(native?.name ?? name),
+        symbol: String(native?.symbol ?? chain.symbol ?? "Native"),
+        balance: native?.balance,
+        decimals: native?.decimals,
+        address: String(native?.address ?? chain.address ?? ""),
+        logo_url: nativeMeta?.logo_url ?? (chain.logo_url as string | undefined),
+        image_url: nativeMeta?.image_url ?? (chain.image_url as string | undefined),
+        icon_url: nativeMeta?.icon_url ?? (chain.icon_url as string | undefined),
+        chainName: name,
+        chainSymbol,
+        isNative: true,
+      };
+      return { key, nativeItem, tokens };
+    });
+    const maxTokens = Math.max(0, ...entries.map((entry) => entry.tokens.length));
+    const items: DisplayItem[] = [];
+    // Keep the order stable while interleaving each network's tokens so one
+    // chain's assets do not form a visually separate group.
+    for (let slot = 0; slot <= maxTokens; slot += 1) {
+      for (const entry of entries) {
+        if (slot === 0) items.push(entry.nativeItem);
+        else if (entry.tokens[slot - 1]) items.push(entry.tokens[slot - 1]!);
+      }
+    }
+    return items;
+  }, [chains, balances]);
 
   async function refresh() {
     try { await refreshBalances(); toast("Balance refresh finished. Check each network's status."); }
@@ -100,30 +164,9 @@ function HomePage() {
     </section>
 
     <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain pb-28 pt-0">
-    {lastError && <details className="group border-b border-destructive/20 px-1 py-2"><summary className="flex cursor-pointer list-none items-start gap-2"><CircleAlert className="mt-0.5 size-4 shrink-0 text-destructive" /><span className="min-w-0 flex-1"><span className="block text-xs font-semibold">Latest engine warning</span><span className="mt-1 block truncate text-[11px] text-muted-foreground">{lastError}</span></span><ChevronDown className="mt-0.5 size-4 shrink-0 text-muted-foreground transition group-open:rotate-180" /></summary><p className="mt-3 break-words border-t border-border pt-3 text-xs leading-relaxed text-destructive">{lastError}</p><Link to="/engine-logs" className="mt-2 inline-block text-xs font-medium underline underline-offset-4">Open request and response logs</Link></details>}
-
-    {derivationErrors.length > 0 && <section className="space-y-2 border-b border-destructive/20 px-1 py-2"><div className="flex items-center gap-2"><CircleAlert className="size-4 text-destructive" /><h2 className="text-xs font-semibold">Address issues <span className="text-muted-foreground">({derivationErrors.length})</span></h2></div>{derivationErrors.map((failure, index) => <details key={String(failure.chain_id ?? failure.chain ?? index)} className="rounded-lg border border-border px-3 py-2"><summary className="cursor-pointer text-xs font-medium">{String(failure.chain ?? failure.chain_name ?? failure.name ?? "Unknown blockchain")} <span className="ml-1 font-normal text-destructive">· Error details</span></summary><p className="mt-2 break-words text-[11px] leading-relaxed text-muted-foreground">{String(failure.error ?? failure.message ?? "No error details were returned.")}</p></details>)}<Link to="/engine-logs" className="inline-block text-xs underline underline-offset-4">Full engine logs</Link></section>}
-
     <section className="space-y-0">
-      <div className="flex items-center justify-between gap-3 px-4 pb-2 pt-3"><div><h2 className="text-sm font-semibold">Your networks</h2></div><Link to="/blockchains" className="text-xs font-medium text-muted-foreground underline underline-offset-4">View all</Link></div>
-      {!chains.length ? <div className="rounded-xl border border-border bg-card px-4 py-9 text-center"><div className="mx-auto grid size-10 place-items-center rounded-xl bg-secondary"><Blocks className="size-5" /></div><p className="mt-3 text-sm font-semibold">No networks connected</p><p className="mx-auto mt-1 max-w-xs text-xs text-muted-foreground">Create or restore a wallet and select the blockchains you want to use.</p></div> : <div>{chains.map((chain, index) => {
-        const chainId = String(chain.chain_id ?? "");
-        const key = chainId || String(chain.name ?? index);
-        const name = readableName(chain);
-        const balance = balances.find((item) =>
-          String(item.chain_id ?? "").trim().toLowerCase() === key.trim().toLowerCase());
-        const native = balance?.native;
-        const state = chainFetchState[key] ?? { status: "idle" as const };
-        const expanded = Boolean(expandedErrors[key]);
-        return <article key={key} className="px-4 py-2.5">
-          <div className="flex items-center gap-2.5"><div className="grid size-9 shrink-0 place-items-center rounded-full bg-secondary text-[10px] font-semibold">{String(chain.symbol ?? native?.symbol ?? name.slice(0, 3)).slice(0, 3).toUpperCase()}</div><div className="min-w-0 flex-1"><h3 className="truncate text-xs font-semibold">{name}</h3><p className="mt-0.5 truncate text-[10px] text-muted-foreground">{String(chain.symbol ?? native?.symbol ?? "Native asset")}</p></div><div className="min-w-0 text-right"><p className="max-w-[44vw] truncate text-sm font-semibold tabular-nums">{hide ? "••••••" : formatBalance(native?.balance, native?.decimals)}</p><p className="mt-0.5 text-[10px] text-muted-foreground">{native?.symbol ?? "Native balance"}</p></div><div className="grid size-6 shrink-0 place-items-center">{state.status === "loading" ? <LoaderCircle className="size-3.5 animate-spin text-muted-foreground" /> : state.status === "error" ? <CircleAlert className="size-4 text-destructive" /> : state.status === "success" ? <CheckCircle2 className="size-4 text-emerald-500" /> : <span className="size-1.5 rounded-full bg-muted-foreground/40" />}</div></div>
-          {(balance?.tokens?.length ?? 0) > 0 && <div className="ml-[2.875rem] mt-2 space-y-1.5">
-            <p className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Tokens · {balance!.tokens!.length}</p>
-            <ProgressiveVirtualTokenList tokens={balance!.tokens!} hidden={hide} formatBalance={formatBalance} />
-          </div>}
-          {state.status === "error" && <div className="mt-2 border-l-2 border-destructive/40 pl-2"><button onClick={() => setExpandedErrors((s) => ({ ...s, [key]: !s[key] }))} className="flex w-full items-center gap-1.5 text-left text-[10px] font-medium text-destructive"><CircleAlert className="size-3" /><span className="flex-1 truncate">{state.message ?? "Balance request failed"}</span>{expanded ? <ChevronUp className="size-3.5" /> : <ChevronDown className="size-3.5" />}</button>{expanded && <div className="mt-2 px-1 py-1"><p className="whitespace-pre-wrap break-words font-mono text-[10px] leading-relaxed text-muted-foreground">{state.message ?? "No detailed error response was returned."}</p><Link to="/engine-logs" className="mt-2 inline-block text-[10px] font-medium underline underline-offset-4">Open full logs</Link></div>}</div>}
-        </article>;
-      })}</div>}
+      <div className="flex items-center justify-between gap-3 px-4 pb-2 pt-3"><div><h2 className="text-sm font-semibold">Assets & networks</h2></div><Link to="/blockchains" className="text-xs font-medium text-muted-foreground underline underline-offset-4">View all</Link></div>
+      {!chains.length ? <div className="px-4 py-8 text-center"><div className="mx-auto grid size-9 place-items-center rounded-lg bg-secondary"><Blocks className="size-4" /></div><p className="mt-3 text-sm font-semibold">No networks connected</p><p className="mx-auto mt-1 max-w-xs text-xs text-muted-foreground">Create or restore a wallet and select the blockchains you want to use.</p></div> : <ProgressiveVirtualTokenList tokens={displayItems} hidden={hide} formatBalance={formatBalance} />}
     </section>
     </div>
   </div>;
