@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDownLeft, ArrowUpRight, ArrowLeftRight, Blocks, CheckCircle2, Eye, EyeOff, LoaderCircle, RefreshCw, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
@@ -12,7 +12,6 @@ import type { AssetId } from "@/lib/wallet/assets";
 export const Route = createFileRoute("/_app/")({ component: HomePage });
 const PRICE_ID: Record<string, AssetId> = { ETH: "ethereum", WETH: "ethereum", BTC: "bitcoin", WBTC: "bitcoin", USDC: "usd-coin", SOL: "solana", LINK: "chainlink", UNI: "uniswap" };
 function readableName(chain: Record<string, unknown>) { return String(chain.name ?? chain.chain_name ?? chain.chain_type ?? "Blockchain").replace(/[-_]/g, " ").replace(/\b\w/g, (letter) => letter.toUpperCase()); }
-function shortAddress(address: string) { return address.length > 26 ? `${address.slice(0, 12)}…${address.slice(-8)}` : address || "Address unavailable"; }
 function amountOf(value: unknown, decimals?: number) {
   const raw = String(value ?? "0").trim().replace(/,/g, "");
   if (!raw) return 0;
@@ -47,7 +46,6 @@ function formatBalance(value: unknown, assetDecimals?: number) {
 function HomePage() {
   const wallet = useWallet((s) => s.wallet);
   const balances = useWallet((s) => s.balances);
-  const chainFetchState = useWallet((s) => s.chainFetchState);
   const refreshing = useWallet((s) => s.refreshingBalances);
   const lastRefresh = useWallet((s) => s.lastBalanceRefresh);
   const refreshBalances = useWallet((s) => s.refreshBalances);
